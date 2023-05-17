@@ -19,7 +19,7 @@ This repo outlines how to install the GlueOps Platform using a helm chart. This 
 
 ```bash
 helm repo add glueops-platform https://helm.gpkg.io/platform
-helm install glueops-platform glueops-platform/glueops-platform --version 0.11.1 -f platform.yaml --namespace=glueops-core
+helm install glueops-platform glueops-platform/glueops-platform --version 0.13.3 -f platform.yaml --namespace=glueops-core
 ```
 
 - Check on ArgoCD application status with
