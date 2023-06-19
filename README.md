@@ -15,11 +15,12 @@ This repo outlines how to install the GlueOps Platform using a helm chart. This 
   - Quick Notes:
     - Replace `<tenant-name-goes-here>` with your tenant/company key. Example: `antoniostacos`
     - Replace `<cluster_env> with your` cluster_environment name. Example: `nonprod`
+    - Replace `<glueops-platform-version>` with the current (or desired) version of the [GlueOps Platform](https://github.com/GlueOps/platform-helm-chart-platform).
     - As mentioned in the ArgoCD docs, the ArgoCD's `clientSecret` needs to match the ArgoCD `client_secret` you define within this `platform.yaml`.
 
 ```bash
 helm repo add glueops-platform https://helm.gpkg.io/platform
-helm install glueops-platform glueops-platform/glueops-platform --version 0.13.5 -f platform.yaml --namespace=glueops-core
+helm install glueops-platform glueops-platform/glueops-platform --version <glueops-platform-version> -f platform.yaml --namespace=glueops-core
 ```
 
 - Check on ArgoCD application status with
